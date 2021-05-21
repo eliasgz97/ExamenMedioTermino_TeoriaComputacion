@@ -5,6 +5,8 @@
  */
 package examenmediotermino_tc;
 
+import java.awt.Color;
+
 /**
  *
  * @author EliasGZ
@@ -27,6 +29,7 @@ public class InterfazExamenTC extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jtxt_inputcadena = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jbt_validar = new javax.swing.JButton();
@@ -35,71 +38,150 @@ public class InterfazExamenTC extends javax.swing.JFrame {
         jlb_parser3 = new javax.swing.JLabel();
         jlb_parser2 = new javax.swing.JLabel();
         jlb_parser4 = new javax.swing.JLabel();
+        jbt_leerArchivoTexto = new javax.swing.JButton();
+        jlb_descripcion1 = new javax.swing.JLabel();
+        jlb_descripcion2 = new javax.swing.JLabel();
+        jlb_descripcion3 = new javax.swing.JLabel();
+        jlb_descripcion4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Ingrese cadena");
 
         jbt_validar.setText("Validar");
+        jbt_validar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_validarActionPerformed(evt);
+            }
+        });
 
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("Examen Medio Término");
 
-        jlb_parser1.setText("Parser 1");
+        jlb_parser1.setText("Lenguaje 1");
 
-        jlb_parser3.setText("Parser 3");
+        jlb_parser3.setText("Lenguaje 3");
 
-        jlb_parser2.setText("Parser 2");
+        jlb_parser2.setText("Lenguaje 2");
 
-        jlb_parser4.setText("Parser 4");
+        jlb_parser4.setText("Lenguaje 4");
+
+        jbt_leerArchivoTexto.setText("Leer Archivo de Texto");
+
+        jlb_descripcion1.setText("--");
+
+        jlb_descripcion2.setText("--");
+
+        jlb_descripcion3.setText("--");
+
+        jlb_descripcion4.setText("--");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jlb_parser4)
+                            .addComponent(jlb_parser3)
+                            .addComponent(jlb_parser2)
+                            .addComponent(jlb_parser1))
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jlb_descripcion2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jlb_descripcion3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jlb_descripcion4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jlb_descripcion1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(54, 54, 54))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGap(67, 67, 67)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(jtxt_inputcadena, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)))
+                .addComponent(jbt_validar)
+                .addContainerGap(66, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(155, 155, 155)
+                .addComponent(jbt_leerArchivoTexto)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jtxt_inputcadena, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbt_validar))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_parser1)
+                    .addComponent(jlb_descripcion1))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_parser2)
+                    .addComponent(jlb_descripcion2))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_parser3)
+                    .addComponent(jlb_descripcion3))
+                .addGap(16, 16, 16)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlb_parser4)
+                    .addComponent(jlb_descripcion4))
+                .addGap(18, 18, 18)
+                .addComponent(jbt_leerArchivoTexto)
+                .addGap(156, 156, 156))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jtxt_inputcadena, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jbt_validar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(178, 178, 178)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(213, 213, 213)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlb_parser1)
-                            .addComponent(jlb_parser4)
-                            .addComponent(jlb_parser2)
-                            .addComponent(jlb_parser3))))
-                .addContainerGap(59, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2)
-                .addGap(51, 51, 51)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtxt_inputcadena, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(jbt_validar))
-                .addGap(37, 37, 37)
-                .addComponent(jlb_parser1)
-                .addGap(18, 18, 18)
-                .addComponent(jlb_parser2)
-                .addGap(18, 18, 18)
-                .addComponent(jlb_parser3)
-                .addGap(18, 18, 18)
-                .addComponent(jlb_parser4)
-                .addContainerGap(171, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbt_validarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_validarActionPerformed
+        Parsers validar = new Parsers();
+        String temporal = jtxt_inputcadena.getText();
+        jtxt_inputcadena.setText(temporal.replaceAll(" ", ""));
+        if (validar.Parser_2(jtxt_inputcadena.getText())){
+            jlb_descripcion2.setForeground(Color.GREEN);
+            jlb_descripcion2.setText("Entrada Aceptada");
+        } else {
+            jlb_descripcion2.setForeground(Color.RED);
+            jlb_descripcion2.setText("Entrada Rechazada");
+        }
+        if (validar.Parser_3(jtxt_inputcadena.getText())) {
+            jlb_descripcion3.setForeground(Color.GREEN);
+            jlb_descripcion3.setText("Entrada Aceptada");
+        } else {
+            jlb_descripcion3.setForeground(Color.RED);
+            jlb_descripcion3.setText("Entrada Rechazada");
+        }
+        if (validar.Parser_4(jtxt_inputcadena.getText())) {
+            jlb_descripcion4.setForeground(Color.GREEN);
+            jlb_descripcion4.setText("Entrada Aceptada");
+        } else {
+            jlb_descripcion4.setForeground(Color.RED);
+            jlb_descripcion4.setText("Entrada Rechazada");
+        }
+    }//GEN-LAST:event_jbt_validarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,7 +221,13 @@ public class InterfazExamenTC extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jbt_leerArchivoTexto;
     private javax.swing.JButton jbt_validar;
+    private javax.swing.JLabel jlb_descripcion1;
+    private javax.swing.JLabel jlb_descripcion2;
+    private javax.swing.JLabel jlb_descripcion3;
+    private javax.swing.JLabel jlb_descripcion4;
     private javax.swing.JLabel jlb_parser1;
     private javax.swing.JLabel jlb_parser2;
     private javax.swing.JLabel jlb_parser3;
