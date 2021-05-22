@@ -67,6 +67,11 @@ public class InterfazExamenTC extends javax.swing.JFrame {
         jlb_parser4.setText("Lenguaje 4");
 
         jbt_leerArchivoTexto.setText("Leer Archivo de Texto");
+        jbt_leerArchivoTexto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbt_leerArchivoTextoActionPerformed(evt);
+            }
+        });
 
         jlb_descripcion1.setText("--");
 
@@ -189,6 +194,12 @@ public class InterfazExamenTC extends javax.swing.JFrame {
             jlb_descripcion4.setText("Entrada Rechazada");
         }
     }//GEN-LAST:event_jbt_validarActionPerformed
+
+    private void jbt_leerArchivoTextoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_leerArchivoTextoActionPerformed
+        ArchivoTextoRead input = new ArchivoTextoRead();
+        input.lectura();
+        jtxt_inputcadena.setText(input.getLectura());
+    }//GEN-LAST:event_jbt_leerArchivoTextoActionPerformed
 
     /**
      * @param args the command line arguments

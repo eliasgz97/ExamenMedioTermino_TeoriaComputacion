@@ -164,6 +164,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Leer Archivo de Texto"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbt_leerArchivoTextoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jlb_descripcion1">
           <Properties>
