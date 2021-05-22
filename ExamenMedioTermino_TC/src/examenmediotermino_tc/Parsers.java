@@ -1,6 +1,24 @@
 package examenmediotermino_tc;
 
 public class Parsers {
+    public boolean Parser_1 (String str){
+        if (str.charAt(0)!='0' && str.charAt(0)!='1')  {
+            return false;
+        }
+        if (str.charAt(1)!='0' && str.charAt(1)!='1')  {
+            return false;
+        }
+        for (int i = 0; i < str.length() - 2; i++) {
+            if (str.charAt(i) != str.charAt(i+2)) {
+               return false;
+            }
+         }  
+         if (str.charAt(0) == str.charAt(1)){
+            return false;  
+         }
+         return true;
+    }
+    
     public boolean Parser_2 (String input){
         int contador_A = 0;
         int contador_B = 0;

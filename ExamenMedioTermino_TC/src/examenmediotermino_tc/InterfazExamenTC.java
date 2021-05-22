@@ -160,6 +160,13 @@ public class InterfazExamenTC extends javax.swing.JFrame {
         Parsers validar = new Parsers();
         String temporal = jtxt_inputcadena.getText();
         jtxt_inputcadena.setText(temporal.replaceAll(" ", ""));
+        if (validar.Parser_1(jtxt_inputcadena.getText())){
+            jlb_descripcion1.setForeground(Color.GREEN);
+            jlb_descripcion1.setText("Entrada Aceptada");
+        } else {
+            jlb_descripcion1.setForeground(Color.RED);
+            jlb_descripcion1.setText("Entrada Rechazada");
+        }
         if (validar.Parser_2(jtxt_inputcadena.getText())){
             jlb_descripcion2.setForeground(Color.GREEN);
             jlb_descripcion2.setText("Entrada Aceptada");
